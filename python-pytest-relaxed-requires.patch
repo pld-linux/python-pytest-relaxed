@@ -1,0 +1,11 @@
+--- pytest-relaxed-1.1.5/setup.py.orig	2019-06-14 20:05:29.000000000 +0200
++++ pytest-relaxed-1.1.5/setup.py	2021-02-16 22:06:47.642151874 +0100
+@@ -24,7 +24,7 @@
+         # TODO: do we need to name the LHS 'pytest_relaxed' too? meh
+         "pytest11": ["relaxed = pytest_relaxed.plugin"]
+     },
+-    install_requires=["pytest>=3,<5", "six>=1,<2", "decorator>=4,<5"],
++    install_requires=["pytest>=3", "six>=1,<2", "decorator>=4,<5"],
+     classifiers=[
+         "Development Status :: 5 - Production/Stable",
+         "Framework :: Pytest",
