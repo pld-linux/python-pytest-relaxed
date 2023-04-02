@@ -1,6 +1,6 @@
 #
 # Conditional build:
-%bcond_without	doc	# Sphinx documentation
+%bcond_with	doc	# Sphinx documentation (TODO: requires releases module)
 %bcond_with	tests	# unit tests (some failures)
 %bcond_without	python2 # CPython 2.x module
 %bcond_without	python3 # CPython 3.x module
@@ -8,6 +8,7 @@
 Summary:	Relaxed test discovery/organization for pytest
 Summary(pl.UTF-8):	Rozluźnione wyszukiwanie/organizacja testów dla pytesta
 Name:		python-pytest-relaxed
+# keep 1.x here for python2 support
 Version:	1.1.5
 Release:	1
 License:	BSD
