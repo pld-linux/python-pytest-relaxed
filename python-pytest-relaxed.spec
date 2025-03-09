@@ -79,7 +79,7 @@ Dokumentacja API modułu Pythona pytest-relaxed.
 
 %prep
 %setup -q -n pytest-relaxed-%{version}
-%patch0 -p1
+%patch -P 0 -p1
 
 %build
 %if %{with python2}
