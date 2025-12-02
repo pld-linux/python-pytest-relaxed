@@ -3,14 +3,14 @@
 %bcond_with	doc	# Sphinx documentation (TODO: requires releases module)
 %bcond_with	tests	# unit tests (some failures)
 %bcond_without	python2 # CPython 2.x module
-%bcond_without	python3 # CPython 3.x module
+%bcond_with	python3 # CPython 3.x module (built from python3-pytest-relaxed.spec)
 
 Summary:	Relaxed test discovery/organization for pytest
 Summary(pl.UTF-8):	Rozluźnione wyszukiwanie/organizacja testów dla pytesta
 Name:		python-pytest-relaxed
 # keep 1.x here for python2 support
 Version:	1.1.5
-Release:	3
+Release:	4
 License:	BSD
 Group:		Libraries/Python
 #Source0Download: https://pypi.org/simple/pytest-relaxed/
@@ -39,8 +39,8 @@ BuildRequires:	python3-six >= 1
 BuildRequires:	rpm-pythonprov
 BuildRequires:	rpmbuild(macros) >= 1.714
 %if %{with doc}
-BuildRequires:	python3-releases
-BuildRequires:	sphinx-pdg-3
+BuildRequires:	python-releases
+BuildRequires:	sphinx-pdg-2
 %endif
 Requires:	python-modules >= 1:2.7
 BuildArch:	noarch
@@ -105,7 +105,7 @@ PYTEST_PLUGINS="pytester,pytest_relaxed" \
 %endif
 
 %if %{with doc}
-sphinx-build-3 -b html docs docs/_build/html
+sphinx-build-2 -b html docs docs/_build/html
 %endif
 
 %install
